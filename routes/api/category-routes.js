@@ -1,4 +1,4 @@
-   const router = require('express').Router();
+const router = require('express').Router();
 const { Category, Product } = require('../../models');
 
 // The `/api/categories` endpoint
@@ -35,6 +35,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
+//creates a new category
 router.post('/', async (req, res) => {
   try {
     const categoryData = await Category.create(req.body);
