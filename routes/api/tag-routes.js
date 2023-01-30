@@ -60,8 +60,8 @@ router.put('/:id', async (req, res) => {
       return;
     }
     res.status(200).json(tagData)
-  } catch {
-    res.status(400).json(tagData)
+  } catch (err) {
+    res.status(400).json(err)
   }
 });
 
